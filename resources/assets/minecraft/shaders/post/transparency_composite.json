@@ -1,0 +1,74 @@
+{
+  "targets": [
+    "swap",
+    "weather",
+    "clouds",
+    "particles"
+  ],
+  "passes": [
+    {
+      "name": "transparency_composite",
+      "intarget": "minecraft:main",
+      "outtarget": "swap",
+      "auxtargets": [
+        {
+          "name": "WeatherSampler",
+          "id": "weather"
+        },
+        {
+          "name": "CloudSampler",
+          "id": "clouds"
+        },
+        {
+          "name": "ParticleSampler",
+          "id": "particles"
+        },
+        {
+          "name": "DepthSampler",
+          "id": "minecraft:main:depth"
+        },
+        {
+          "name": "TranslucentDepthSampler",
+          "id": "minecraft:translucent:depth"
+        }
+      ],
+      "uniforms": [
+        {
+          "name": "WeatherOpacity",
+          "type": "float",
+          "count": 1,
+          "values": [1.0]
+        },
+        {
+          "name": "CloudOpacity",
+          "type": "float",
+          "count": 1,
+          "values": [1.0]
+        },
+        {
+          "name": "ParticleOpacity",
+          "type": "float",
+          "count": 1,
+          "values": [1.0]
+        },
+        {
+          "name": "UseDepthSorting",
+          "type": "int",
+          "count": 1,
+          "values": [1]
+        },
+        {
+          "name": "RenderQuality",
+          "type": "int",
+          "count": 1,
+          "values": [2]
+        }
+      ]
+    },
+    {
+      "name": "blit",
+      "intarget": "swap",
+      "outtarget": "minecraft:main"
+    }
+  ]
+}

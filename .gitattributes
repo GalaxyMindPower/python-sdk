@@ -1,2 +1,27 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Java sources
+*.java text diff=java
+*.gradle text diff=java
+*.gradle.kts text diff=java
+
+# Shader files
+*.glsl text
+*.vsh text
+*.fsh text
+*.vert text
+*.frag text
+
+# JSON files
+*.json text
+
+# Documentation
+*.md text
+*.txt text
+
+# Binary files
+*.jar binary
+*.png binary
+*.jpg binary
+*.class binary

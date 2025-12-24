@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "improved-transparency",
+  "version": "1.0.0",
+  "name": "Improved Transparency Mod",
+  "description": "Experimental approach using screen shaders for drawing weather, clouds, and particles behind translucent blocks and water. May impact GPU performance.",
+  "authors": [
+    "Transparency Team"
+  ],
+  "contact": {
+    "homepage": "https://github.com/transparency-mod",
+    "sources": "https://github.com/transparency-mod"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.transparency.TransparencyMod"
+    ],
+    "client": [
+      "com.transparency.client.TransparencyClientMod"
+    ]
+  },
+  "mixins": [
+    "transparency.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": ">=1.19.x"
+  },
+  "custom": {
+    "modmenu": {
+      "badges": ["library"],
+      "parent": {
+        "id": "improved-transparency",
+        "name": "Improved Transparency",
+        "badges": ["library"],
+        "description": "Screen shader-based transparency rendering"
+      }
+    }
+  }
+}
