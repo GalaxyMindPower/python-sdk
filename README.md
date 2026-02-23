@@ -1,12 +1,12 @@
 # AIR SDK for Python
 
-[![CI](https://github.com/nostalgicskinco/air-sdk-python/actions/workflows/ci.yml/badge.svg)](https://github.com/nostalgicskinco/air-sdk-python/actions/workflows/ci.yml)
+[![CI](https://github.com/airblackbox/python-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/airblackbox/python-sdk/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-blue?logo=python&logoColor=white)](https://python.org)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
 
 **Record every AI decision your agents make. One line of code.**
 
-AIR SDK connects your Python AI applications to the [AIR Blackbox Gateway](https://github.com/nostalgicskinco/air-blackbox-gateway) — giving you tamper-evident audit trails, compliance reporting, and deterministic replay without changing how you write code.
+AIR SDK connects your Python AI applications to the [AIR Blackbox Gateway](https://github.com/airblackbox/gateway) — giving you tamper-evident audit trails, compliance reporting, and deterministic replay without changing how you write code.
 
 ## Install
 
@@ -106,15 +106,15 @@ When your code runs through AIR, every LLM call automatically gets:
 
 ## Part of the AIR Ecosystem
 
-This SDK is the developer entry point to the [AIR Blackbox Gateway](https://github.com/nostalgicskinco/air-blackbox-gateway) infrastructure:
+This SDK is the developer entry point to the [AIR Blackbox Gateway](https://github.com/airblackbox/gateway) infrastructure:
 
 | Component | What It Does |
 |---|---|
-| **air-sdk-python** (this repo) | Python integrations for OpenAI, LangChain, CrewAI |
-| [air-blackbox-gateway](https://github.com/nostalgicskinco/air-blackbox-gateway) | Core proxy + vault + audit chain + compliance |
-| [air-platform](https://github.com/nostalgicskinco/air-platform) | Docker Compose orchestration |
-| [agent-episode-store](https://github.com/nostalgicskinco/agent-episode-store) | Episode-level audit grouping |
-| [agent-policy-engine](https://github.com/nostalgicskinco/agent-policy-engine) | Risk-tiered autonomy + runtime policy |
+| **python-sdk** (this repo) | Python integrations for OpenAI, LangChain, CrewAI |
+| [gateway](https://github.com/airblackbox/gateway) | Core proxy + vault + audit chain + compliance |
+| [air-platform](https://github.com/airblackbox/air-platform) | Docker Compose orchestration |
+| [agent-episode-store](https://github.com/airblackbox/agent-episode-store) | Episode-level audit grouping |
+| [agent-policy-engine](https://github.com/airblackbox/agent-policy-engine) | Risk-tiered autonomy + runtime policy |
 
 ## License
 
